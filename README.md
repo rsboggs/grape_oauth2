@@ -637,7 +637,7 @@ module MyAPI
           request.invalid_grant! if resource_owner.nil? || resource_owner.inactive?
 
           # You can create an Access Token as you want:
-          token = MyAwesomeAccessToken.create(client: client,
+          token = MyAwesomeAccessToken.create!(client: client,
                                               resource_owner: resource_owner,
                                               scope: request.scope)
 

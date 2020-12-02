@@ -22,7 +22,7 @@ module Grape
 
           class << self
             def create_for(client, resource_owner, redirect_uri, scopes = nil)
-              create(
+              create!(
                 client_id: client.id,
                 resource_owner_id: resource_owner && resource_owner.id,
                 redirect_uri: redirect_uri,

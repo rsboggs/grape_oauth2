@@ -30,7 +30,7 @@ module Grape
 
           class << self
             def create_for(client, resource_owner, scopes = nil)
-              create(
+              create!(
                 client: client,
                 resource_owner: resource_owner,
                 scopes: scopes.to_s
